@@ -1,6 +1,6 @@
 # IRCD Setup
 
-For the purpose of a quick and instant chat or communication which is 100% anonymous and if chosen private, we use [ircd](https://darkrenaissan    ce.github.io/darkfi/misc/ircd/ircd.html) - a peer-to-peer chat, built by [DarkFi]((https://dark.fi). 
+For the purpose of a quick and instant chat or communication which is 100% anonymous and if chosen private, we use [ircd](https://darkrenaissan    ce.github.io/darkfi/misc/ircd/ircd.html) - a peer-to-peer chat, built by [DarkFi](https://dark.fi). 
 
 * The ircd source: https://github.com/darkrenaissance/darkfi/tree/master/bin/ircd
 * Weechat documentation: https://weechat.org/doc/
@@ -10,7 +10,7 @@ For the purpose of a quick and instant chat or communication which is 100% anony
 **Dependencies**
 
 ```sh
-sudo apt-get install -y git make jq gcc weechat pkg-config libssl-dev
+sudo apt-get install -y git make jq gcc weechat wget pkg-config libssl-dev
 ```
 On debian based system, the user can run this to install dependencies:
 
@@ -18,9 +18,16 @@ On debian based system, the user can run this to install dependencies:
 sudo apt-get update
 ```
 ```sh
-sudo apt-get install -y git make jq gcc weechat pkg-config libmpg123-dev
+sudo apt-get install -y git make jq gcc weechat wget pkg-config libmpg123-dev
 ```
 For other os, check [here](https://darkrenaissance.github.io/darkfi/index.html) to see which dependencies are needed. 
+
+**Config Download**
+
+```sh
+mkdir ~/.config/darkfi
+wget -P ~/.config/darkfi https://github.com/lunardao/ircd/blob/master/ircd_config.toml 
+```
 
 ### ircd
 
