@@ -1,0 +1,100 @@
+#################################################################################
+#################################################################################
+# This configuration is for lunardao community chat setup. 
+# LunarDAO re-used the original open source developped by DarkFi as the ircd chat
+# fits the best the anonymity requirements of LunarDAO. 
+# The original source can be found on DakrFi github: 
+# https://github.com/darkrenaissance/darkfi/blob/master/bin/ircd/ircd_config.toml
+#################################################################################
+#################################################################################
+
+## JSON-RPC listen URL                
+#rpc_listen="tcp://127.0.0.1:11055"                                                                      
+                                                    
+## IRC listen URL               
+irc_listen="tcp://127.0.0.1:6667"                                                                        
+                                                    
+## List of channels to autojoin for new client connections          
+autojoin = ["#lunardao"]
+## If you are interested in DarkFi development comment the previous line and use the line below
+# autojoin = ["#lunardao", "#dev", "#memes", "#philosophy", "#markets", "#math", "#random"]
+                                                                                       
+## P2P net settings
+[net]                                                                            
+                                                    
+## Connection slots        
+outbound_connections=5                                                                                                                                                   
+
+## P2P accept addresses
+#inbound = ["tls://0.0.0.0:25551"]
+# ipv6 version:
+#inbound = ["tls://[::]:25551"]
+
+## P2P external addresses
+## Put your IPs or hostnames here
+## This is how people can reach you on the inbound port configured above
+## You can also put an ipv6 address :)
+#external_addr = ["tls://XXX.XXX.XXX.XXX:25551"]
+# ipv6 version:
+#external_addr = ["tls://[ipv6 address here]:25551"]
+
+## Manually configured peers to connect to
+#peers = ["tls://127.0.0.1:25551"]
+
+## Seed nodes to connect to                                                                              
+seeds=["tls://lilith0.dark.fi:25551", "tls://lilith1.dark.fi:25551"]
+
+# Prefered transports for outbound connections
+#outbound_transports = ["tls", "tcp"]
+
+## Only used for debugging. Compromises privacy when set.
+#node_id = "foo"
+
+## these are the default configuration for the p2p network
+#manual_attempt_limit=0
+#seed_query_timeout_seconds=8
+#connect_timeout_seconds=10
+#channel_handshake_seconds=4
+#channel_heartbeat_seconds=10
+
+#####################
+## SECRET CHANNELS ##
+#####################
+
+## Per-channel settings
+## Create a channel by adding name below, uncomment and add the name to autojoin line
+#[channel."#foo"]
+## Create secret per-channel with `ircd --gen-secret`
+## Paste to the next line instead of the example and uncomment
+#secret = "7CkVuFgwTUpJn5Sv67Q3fyEDpa28yrSeL5Hg2GqQ4jfM"
+## Topic to set for the channel
+#topic = "DarkFi Foo Stuff"
+
+[channel."#lunardao"]
+topic = "LunarDAO Community Chat & Meetings"
+
+######################
+## PRIVATE MESSAGES ##
+######################
+
+### Contacts list
+## Private key used to decrypt direct messages to you along with
+## contact_pubkey. (configured only once)
+## Generate keypair using 'ircd --gen-keypair' 
+## or to save to a file 'ircd --gen-keypair -o ~/some_dir/filename'
+## !!SHOULD NEVER SHARE THIS!!
+## Exchange your priv-key with the string below and uncomment
+#[private_key."955Dfa83pU7RCevT2rMrGfhza4kcy6FShSNE6AdR4Q7A"]
+
+## Shared Public key that encrypt direct communication between two nicknames
+## on the network.
+## These are in the form of [Contact_nick, Contact_pubkey]
+## Per-contact settings
+## contact nickname (this is not irc nickname, and could be anything you want)
+## irc msgs should be pointed to this nickname.
+## save name and your contact pub-key below and uncomment
+#[contact."name"]
+## contact public key
+#contact_pubkey = "pub-key-of-the-contact"
+## For DMS to work both parties need to have saved contact in their config
+
