@@ -1,6 +1,6 @@
 # IRCD Setup
 
-For the purpose of a quick and instant chat or communication which is 100% anonymous and if chosen private, we use [ircd](https://darkrenaissan    ce.github.io/darkfi/misc/ircd/ircd.html) - a peer-to-peer chat, built by [DarkFi](https://dark.fi). 
+For the purpose of a quick and instant chat or communication which is 100% anonymous and if chosen private, we use [ircd](https://darkrenaissance.github.io/darkfi/misc/ircd/ircd.html) - a peer-to-peer chat, built by [DarkFi](https://dark.fi). 
 
 * The ircd source: https://github.com/darkrenaissance/darkfi/tree/master/bin/ircd
 * Weechat documentation: https://weechat.org/doc/
