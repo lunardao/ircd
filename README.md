@@ -26,7 +26,7 @@ For other os, check [here](https://darkrenaissance.github.io/darkfi/index.html) 
 
 ```sh
 mkdir ~/.config/darkfi
-wget -P ~/.config/darkfi https://github.com/lunardao/ircd/blob/master/ircd_config.toml 
+wget -P ~/.config/darkfi https://raw.githubusercontent.com/lunardao/ircd/master/ircd_config.toml)https://raw.githubusercontent.com/lunardao/ircd/master/ircd_config.toml
 ```
 
 ### ircd
